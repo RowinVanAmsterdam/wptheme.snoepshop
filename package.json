@@ -1,0 +1,24 @@
+{
+  "name": "wptheme.snoepshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run compile-scss -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss": "sass assets/styles/scss:assets/styles/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rowin206/wptheme.snoepshop.git"
+  },
+  "author": "RVA Services",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rowin206/wptheme.snoepshop/issues"
+  },
+  "homepage": "https://github.com/Rowin206/wptheme.snoepshop#readme",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}
