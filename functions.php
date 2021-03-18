@@ -1,7 +1,7 @@
 <?php
 function load_stylesheets() {
     wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', '', 1, 'all');
-    wp_register_style('snoepshop-style', get_template_directory_uri() . '/assets/styles/css/snoepshop.css', '', 1, 'all');
+    wp_register_style('snoepshop-style', get_template_directory_uri() . '/assets/styling/css/snoepshop.css', '', 1, 'all');
     wp_enqueue_style('stylesheet');
     wp_enqueue_style('snoepshop-style');
 }
@@ -13,3 +13,13 @@ function load_javascript() {
     wp_enqueue_script('custom');
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
+
+// Add theme support
+add_theme_support('menus');
+
+// Register menu
+register_nav_menus(
+    array(
+        'main-menu' => __('Main Menu', 'wptheme.snoepshop')
+    )
+    );

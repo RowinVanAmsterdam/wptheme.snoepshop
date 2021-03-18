@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run compile-scss -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-scss": "sass assets/styles/scss:assets/styles/css"
+    "compile-scss": "sass assets/styling/scss:assets/styling/css"
   },
   "repository": {
     "type": "git",
