@@ -13,17 +13,21 @@
 
     <header class="header">
         <div class="header__container container">
-            <div class="header__logo">
+            <a href="/" class="header__logo">
                 <img src="<?php bloginfo('template_directory'); ?>/assets/images/logos/snoepshop-logo.svg"
                     alt="Snoepshop logo">
-            </div>
+            </a>
             <!-- <div>
                 <?php wp_nav_menu(array('theme-location' => 'main-menu'));?>
             </div> -->
             <nav>
                 <ul>
-                    <li>Account</li>
-                    <li>Winkelwagen</li>
+                    <li>
+                        <a href="/mijn-account">Account</a>
+                    </li>
+                    <li>
+                        <a href="/winkelmand">Winkelmand</a>
+                    </li>
                 </ul>
             </nav>
         </div>
