@@ -5,7 +5,6 @@ function load_stylesheets() {
     wp_enqueue_style('stylesheet');
     wp_enqueue_style('snoepshop-style');
 }
-
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 
 function load_javascript() {
@@ -14,8 +13,30 @@ function load_javascript() {
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
 
+// function load_iconSprite() {
+//     get_template_part('/assets/images/icon-sprite.svg', 'hello');
+// }
+// add_action('wp_enqueue_scripts', 'load_iconSprite');
+
+// function load_inline_svg($filename) {
+ //https://enshrined.co.uk/2018/09/19/how-to-properly-include-inline-svgs-in-a-wordpress-theme/
+//     // Add the path to your SVG directory inside your theme.
+//     $svg_path = '/assets/images/svg-sprite';
+ 
+//     // Check the SVG file exists
+//     if ( file_exists( get_stylesheet_directory() . $svg_path . $filename ) ) {
+ 
+//         // Load and return the contents of the file
+//         return file_get_contents( get_stylesheet_directory_uri() . $svg_path . $filename );
+//     }
+ 
+//     // Return a blank string if we can't find the file.
+//     return file_get_contents( get_stylesheet_directory_uri() . $svg_path . $filename );
+// }
+
 // Add theme support
 add_theme_support('menus');
+add_theme_support('woocommerce');
 
 // Register menu
 register_nav_menus(

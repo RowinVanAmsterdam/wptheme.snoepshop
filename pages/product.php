@@ -8,7 +8,9 @@ Template Name: Product
 
 <main>
     <section>
+    <h1>tester</h1>
         <?php echo do_shortcode("[product]"); ?>
+        <h2>fefok</h2>
     </section>
 </main>
 

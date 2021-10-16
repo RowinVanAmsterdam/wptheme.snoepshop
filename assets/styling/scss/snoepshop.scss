@@ -1,6 +1,14 @@
+/* utils */
+@import 'utils/mixins';
+@import 'utils/variables';
+
 /* base */
 @import 'base/base';
 @import 'base/grid';
+@import 'base/typography';
 
 /* layout */
 @import 'layout/header';
+
+/* pages */
+@import 'pages/account';

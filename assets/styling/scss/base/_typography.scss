@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Lilita One';
+    src: url('../../fonts/LilitaOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Open sans';
+    src: url('../../fonts/OpenSans-VariableFont.ttf');
+}
+
+body {
+    font-family: $font-family-base;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin: 1em 0;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+.h5 {
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, .h2 {
+    font-family: $font-family-headings;
+    font-weight: bold;
+}
+
+a {
+    color: red;
+    
+    &:link {
+        cursor: pointer;
+    }
+
+    &:focus {
+        text-decoration: none;
+    }
+}

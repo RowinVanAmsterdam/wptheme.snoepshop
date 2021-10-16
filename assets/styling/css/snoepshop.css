@@ -1,3 +1,5 @@
+/* utils */
+/* Fonts */
 /* base */
 html {
   -webkit-box-sizing: border-box;
@@ -116,10 +118,73 @@ svg {
   height: 100%;
 }
 
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #edeff1;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+@font-face {
+  font-family: "Lilita One";
+  src: url("../../fonts/LilitaOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Open sans";
+  src: url("../../fonts/OpenSans-VariableFont.ttf");
+}
+body {
+  font-family: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin: 1em 0;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+.h5 {
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, .h2 {
+  font-family: "Lilita One", Arial, sans-serif;
+  font-weight: bold;
+}
+
+a {
+  color: red;
+}
+a:link {
+  cursor: pointer;
+}
+a:focus {
+  text-decoration: none;
 }
 
 /* layout */
@@ -127,19 +192,74 @@ svg {
   background-color: #fff;
   width: 100vw;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid #ececec;
+  height: auto;
 }
-.header__container {
+.header .header-main {
   display: flex;
-  border: 1px solid green;
   justify-content: space-between;
   align-items: center;
 }
-.header__logo {
+.header .header-main__logo {
   display: flex;
   border: 1px solid red;
   width: 100px;
   height: 55px;
   margin: 10px 25px 10px 0;
+}
+.header .header-main__logo img {
+  fill: red !important;
+  color: red !important;
+}
+.header .header-main__nav-list {
+  display: flex;
+}
+.header .header-main__nav-list-item {
+  margin-right: 20px;
+}
+.header .header-main__link {
+  display: flex;
+  align-items: center;
+}
+.header .header-main__link .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.header .header-sub {
+  height: auto;
+}
+.header .header-sub .category-list {
+  display: flex;
+}
+.header .header-sub .category-list-item {
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+/* pages */
+.my-account {
+  margin: 25px auto 0;
+  max-width: 1140px;
+  padding: 0 15px;
+  border: 1px solid red;
+}
+.my-account .woocommerce-MyAccount-navigation {
+  width: 25%;
+}
+.my-account .woocommerce-MyAccount-navigation .is-active a {
+  color: #e71765;
+}
+.my-account .woocommerce-MyAccount-navigation-link a {
+  color: #7a7a7a;
+  font-size: 18px;
+  text-decoration: none;
+}
+.my-account .woocommerce-MyAccount-navigation-link a:hover {
+  color: #e71765;
+}
+.my-account .woocommerce-MyAccount-content {
+  width: 75%;
 }
 
 /*# sourceMappingURL=snoepshop.css.map */
