@@ -2,8 +2,10 @@
 function load_stylesheets() {
     wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', '', 1, 'all');
     wp_register_style('snoepshop-style', get_template_directory_uri() . '/assets/styling/css/snoepshop.css', '', 1, 'all');
+    wp_register_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.11/css/all.css');
     wp_enqueue_style('stylesheet');
     wp_enqueue_style('snoepshop-style');
+    wp_enqueue_style('font-awesome');
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 

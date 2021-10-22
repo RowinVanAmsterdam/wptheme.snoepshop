@@ -11,4 +11,8 @@
 @import 'layout/header';
 
 /* pages */
+@import 'pages/home';
 @import 'pages/account';
+
+/* template-parts */
+@import 'template-parts/cards';

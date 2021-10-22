@@ -4,6 +4,9 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
   border-bottom: 2px solid #ececec;
   height: auto;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   .header-main {
     display: flex;
@@ -12,15 +15,9 @@
 
     &__logo {
       display: flex;
-      border: 1px solid red;
-      width: 100px;
+      width: 150px;
       height: 55px;
       margin: 10px 25px 10px 0;
-
-      img {
-        fill: red !important;
-        color: red !important;
-      }
     }
 
     &__nav-list {
@@ -28,7 +25,9 @@
     }
 
     &__nav-list-item {
-      margin-right: 20px;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
     }
 
     &__link {
@@ -41,10 +40,24 @@
         margin-right: 10px;
       }
     }
+
+    &__label {
+      display: none;
+      @include respond-to($mobile) {
+        display: inline-block;
+      }
+    }
   }
 
   .header-sub {
     height: auto;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .category-list {
       display: flex;
@@ -52,6 +65,10 @@
       &-item {
         margin-right: 10px;
         padding: 5px 10px;
+
+        &:first-child {
+          padding-left: 0;
+        }
       }
     }
   }

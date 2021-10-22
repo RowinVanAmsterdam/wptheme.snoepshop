@@ -1,6 +1,23 @@
-// colors
+/* Colors */
 $color-01: #ff0a54;
+$color-02: #ff477e;
+$color-03: #ff7096;
+$color-04: #ff99ac;
+$color-05: #fbb1bd;
+$color-06: #fae0e4;
+
+$color-07: #f8f9fa;
+$color-08: #ced4da;
+$color-09: #adb5bd;
+$color-10: #6c757d;
+$color-11: #343a40;
+$color-12: #212529;
+
+$color-text: $color-11;
 
 /* Fonts */
 $font-family-headings: 'Lilita One', Arial, sans-serif;
 $font-family-base: 'Open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* Screen width */
+$mobile: 480px;

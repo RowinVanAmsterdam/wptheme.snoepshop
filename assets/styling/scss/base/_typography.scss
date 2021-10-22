@@ -8,6 +8,8 @@
     src: url('../../fonts/OpenSans-VariableFont.ttf');
 }
 
+
+
 body {
     font-family: $font-family-base;
 }
@@ -39,7 +41,6 @@ h1, h2, h3, h4, .h2 {
 }
 
 a {
-    color: red;
     
     &:link {
         cursor: pointer;

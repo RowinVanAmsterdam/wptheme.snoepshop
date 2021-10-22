@@ -22,14 +22,9 @@
     $product_categories = get_terms($args);
 ?>
 
+
 <body <?php body_class('');?>>
     <header class="header">
-        <?php if( $viewportWidth > 640 ) { ?>
-        <p>test</p>
-        <?php } else { ?>
-        <p>visitor</p>
-        <?php } ?>
-
         <div class="header-main container">
             <a href="/" class="header-main__logo">
                 <img src="<?php bloginfo('template_directory'); ?>/assets/images/logos/snoepshop-logo.svg"
@@ -42,7 +37,7 @@
                             <svg class="icon">
                                 <use href="#icon-user" />
                             </svg>
-                            Mijn account
+                            <span class="header-main__label">Mijn account</span>
                         </a>
                     </li>
                     <li class="header-main__nav-list-item">
@@ -50,7 +45,7 @@
                             <svg class="icon">
                                 <use href="#icon-shopping-bag" />
                             </svg>
-                            Winkelmand
+                            <span class="header-main__label">Winkelmand</span>
                         </a>
                     </li>
                 </ul>

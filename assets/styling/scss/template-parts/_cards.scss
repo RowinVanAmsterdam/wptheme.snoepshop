@@ -1,0 +1,44 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $color-08;
+    border-radius: 12px;
+    background-color: #fff;
+
+    .woocommerce-loop-product {
+        &__link {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 10px 10px 5px;
+        }
+
+        &__title {
+            color: $color-text;
+        }
+    }
+
+    .star-rating {
+
+    }
+
+    .price {
+        margin-top: auto;
+    }
+
+    .button {
+        margin: 0!important;
+        text-align: center;
+        color: #fff!important;
+        background-color: $color-02!important;
+        border-radius: 12px!important;
+
+        &::before {
+            content: '\f290';
+            font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+            margin-right: 8px;
+            font-size: 14px;
+        }
+    }
+}
