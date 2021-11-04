@@ -46,3 +46,38 @@ register_nav_menus(
         'main-menu' => __('Main Menu', 'wptheme.snoepshop')
     )
 );
+
+// Register widgets menu
+
+// id – a unique identifier of a widget area
+// name – the name of the widget area, which will be displayed in Appearance > Widgets
+// description – a description of the widget area that is displayed within it and visible in Appearance > Widgets
+// class – additional CSS class that can be assigned to the widget area, which will help you customize the widget area with CSS later
+// before_widget – a block of HTML code added before every widget that belongs to the widget area
+// after_widget – a block of HTML code added after every widget that belongs to the widget area
+// before_title – a block of HTML code added before the widget area title when it is displayed
+// after_title – a block of HTML code added after the widget area title when it is displayed
+// function register_custom_widget_area() {
+//     register_sidebar(
+//     array(
+//     'id' => 'shop',
+//     'name' => esc_html__( 'dig', 'theme-domain' ),
+//     'description' => esc_html__( 'A new widget area made for testing purposes', 'theme-domain' ),
+//     'before_widget' => '<div id="%1$s" class="widget %2$s">',
+//     'after_widget' => '</div>',
+//     'before_title' => '<div class="widget-title-holder"><h3 class="widget-title">',
+//     'after_title' => '</h3></div>'
+//     )
+//     );
+//     }
+//     add_action( 'widgets_init', 'register_custom_widget_area' );
+
+    register_sidebar (
+        array(
+            'name' => 'Page sidebar',
+            'id' => 'page-sidebar',
+            'class' => '',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>'
+        )
+        );

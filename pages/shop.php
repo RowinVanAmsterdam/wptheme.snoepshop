@@ -8,8 +8,9 @@ Template Name: Shop
 
 <main>
     <section>
-        <h2>Assortiment</h2>
+        <h2>Assortimeneett</h2>
         <?php echo do_shortcode("[products]"); ?>
+        <h1>hello</h1>
     </section>
 </main>
 
