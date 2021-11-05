@@ -289,9 +289,31 @@ a:focus {
   width: 75%;
 }
 
+.archive-product .woocommerce-products-header {
+  background-color: #ff0a54;
+  margin-bottom: 50px;
+}
+.archive-product .woocommerce-products-header__title {
+  text-align: center;
+  color: #fff;
+}
 .archive-product .lister {
   display: flex;
-  width: 100vw;
+  flex-direction: column;
+}
+@media only screen and (min-width: 480px) {
+  .archive-product .lister {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .archive-product .lister__sidebar {
+    width: 250px;
+    margin-right: 25px;
+  }
+}
+.archive-product .lister__results {
+  width: 100%;
 }
 
 #home .section-title {
@@ -302,6 +324,10 @@ a:focus {
 }
 
 /* template-parts */
+.products {
+  display: flex;
+}
+
 .product {
   display: flex;
   flex-direction: column;
@@ -394,6 +420,42 @@ a:focus {
 }
 .product-category .woocommerce-loop-category__title .count {
   display: none;
+}
+
+.wpf_hide_text li > input:checked + label > i:after, .wpf_item input[type=checkbox]:checked:before {
+  color: #E71765;
+}
+
+.wpf_slider.ui-slider .ui-widget-header {
+  background: #E71765 !important;
+}
+
+.wpf_reset_btn {
+  border: 1px solid #E71765;
+  color: #E71765;
+  text-align: center;
+  padding: 0 !important;
+  max-width: 200px;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.wpf_reset_btn:hover {
+  border: 1px solid #CF145A;
+  background-color: #CF145A;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.wpf_reset_btn::before,
+.wpf_reset_btn::after {
+  display: none !important;
+}
+
+.wpf_reset_btn input[type=reset] {
+  width: 100%;
+  cursor: pointer;
+  padding: 5px !important;
 }
 
 /*# sourceMappingURL=snoepshop.css.map */

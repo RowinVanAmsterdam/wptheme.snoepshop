@@ -43,6 +43,7 @@
 
     &__label {
       display: none;
+      
       @include respond-to($mobile) {
         display: inline-block;
       }

@@ -1,6 +1,32 @@
 .archive-product {
+    .woocommerce-products-header {
+        background-color: $color-01;
+        margin-bottom: 50px;
+
+        &__title {
+            text-align: center;
+            color: #fff;
+        }
+    }
+
     .lister {
         display: flex;
-        width: 100vw;
+        flex-direction: column;
+
+        @include respond-to($mobile) {
+            flex-direction: row;
+        }
+
+
+        &__sidebar {
+            @include respond-to($mobile) {
+                width: 250px;
+                margin-right: 25px;
+            }
+        }
+
+        &__results {
+            width: 100%;
+        }
     }
 }

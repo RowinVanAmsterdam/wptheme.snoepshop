@@ -1,0 +1,35 @@
+.wpf_hide_text li>input:checked+label>i:after, .wpf_item input[type="checkbox"]:checked:before {
+    color: #E71765;
+}
+
+.wpf_slider.ui-slider .ui-widget-header {
+    background: #E71765!important;
+}
+
+.wpf_reset_btn {
+   border:1px solid #E71765;
+    color: #E71765;
+    text-align: center;
+    padding: 0!important;
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.wpf_reset_btn:hover {
+   border:1px solid #CF145A;
+   background-color: #CF145A;
+    color: #fff;
+    transition: .2s ease;
+}
+
+.wpf_reset_btn::before,
+.wpf_reset_btn::after {
+    display: none!important;
+}
+
+.wpf_reset_btn input[type="reset"] {
+    width: 100%;
+    cursor: pointer;
+    padding: 5px!important;
+}
