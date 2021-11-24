@@ -22,7 +22,6 @@
 // 	}
 // }
 
-
 // // Set our initial width and log it
 // setViewportWidth();
 // logWidth();
@@ -33,3 +32,23 @@
 // 	setViewportWidth();
 // 	logWidth();
 // }, false);
+
+// Collapse
+
+var i;
+
+const displayFilter = () => {
+    var acc = document.getElementsByClassName("accordion");
+    for (i = 0; i < acc.length; i++) {
+            acc[i].classList.toggle("active");
+            var panel = acc[i].nextElementSibling;
+            console.log(panel);
+            if (!panel.classList.contains('open')) {
+                panel.classList.add("open");
+            } else {
+                panel.classList.remove("open");
+            }
+  }
+};
+
+// document.getElementById("filter-btn").addEventListener("click", displayFilter);

@@ -1,14 +1,29 @@
-.products {
-    display: flex;
-}
+// .products {
+//     display: flex;
+//     flex-flow: row wrap;
+//     align-items: stretch;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     gap: 20px;
+// }
+
+
+
+// .wooarchive {
+//     flex: 1 0 100%;
+// }
 
 .product {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 0 6px 0 rgb(0 0 0 / 10%);
     max-width: 225px;
+    align-items: stretch;
+    width: 100%!important;
+    margin: 0!important;
 
     &:hover {
         transform: translateY(-2px);

@@ -125,7 +125,7 @@ button {
 }
 
 svg {
-  display: block;
+  display: inline-block;
   width: 100%;
   height: 100%;
 }
@@ -149,6 +149,31 @@ svg {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+}
+.products::before {
+  display: none !important;
+}
+@media only screen and (min-width: 600px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .products {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 @font-face {
@@ -289,6 +314,12 @@ a:focus {
   width: 75%;
 }
 
+.archive-product .woocommerce-breadcrumb {
+  background: #ff0a54;
+  padding: 0 15px;
+  margin: 0;
+  color: #fff;
+}
 .archive-product .woocommerce-products-header {
   background-color: #ff0a54;
   margin-bottom: 50px;
@@ -300,20 +331,94 @@ a:focus {
 .archive-product .lister {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 1024px) {
   .archive-product .lister {
     flex-direction: row;
   }
 }
-@media only screen and (min-width: 480px) {
-  .archive-product .lister__sidebar {
+.archive-product .lister__sidebar .product-filter {
+  border: 1px solid #ced4da;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  .archive-product .lister__sidebar .product-filter {
     width: 250px;
     margin-right: 25px;
+    border: none;
   }
 }
-.archive-product .lister__results {
+.archive-product .lister__sidebar .product-filter__label {
+  display: block;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  .archive-product .lister__sidebar .product-filter__label {
+    display: none;
+  }
+}
+.archive-product .lister__sidebar .product-filter .content {
+  position: relative;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+@media only screen and (min-width: 1024px) {
+  .archive-product .lister__sidebar .product-filter .content {
+    max-height: fit-content;
+  }
+}
+.archive-product .lister__sidebar .product-filter .content.open {
+  position: relative;
+  max-height: fit-content;
+}
+.archive-product .lister__sort-count-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 480px) {
+  .archive-product .lister__sort-count-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+}
+.archive-product .lister__sort-count-wrapper .woocommerce-notices-wrapper {
   width: 100%;
+}
+.archive-product .lister__sort-count-wrapper .woocommerce-result-count,
+.archive-product .lister__sort-count-wrapper .woocommerce-ordering {
+  margin: 0 0 13px;
+}
+.archive-product .lister__sort-count-wrapper .orderby {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #343a40;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+}
+@media only screen and (min-width: 480px) {
+  .archive-product .lister__sort-count-wrapper .orderby {
+    width: 250px;
+  }
 }
 
 #home .section-title {
@@ -321,20 +426,21 @@ a:focus {
 }
 #home .products {
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* template-parts */
-.products {
-  display: flex;
-}
-
 .product {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
   max-width: 225px;
+  align-items: stretch;
+  width: 100% !important;
+  margin: 0 !important;
 }
 .product:hover {
   transform: translateY(-2px);

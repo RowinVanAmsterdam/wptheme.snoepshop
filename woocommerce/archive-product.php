@@ -4,30 +4,40 @@ get_template_part( 'template-parts/layout/header');
 ?>
 
 <div class="archive-product">
-	<!-- woocommerce_breadcrumb -->
-	<?php do_action( 'woocommerce_before_main_content' ); ?>
+    <!-- woocommerce_breadcrumb -->
+    <?php do_action( 'woocommerce_before_main_content' ); ?>
 
-	<header class="woocommerce-products-header">
+    <header class="woocommerce-products-header">
         <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
         <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
         <?php endif; ?>
 
-        <?php
-	do_action( 'woocommerce_archive_description' );
-	?>
+        <?php do_action( 'woocommerce_archive_description' ); ?>
     </header>
 
     <section class="lister container">
         <aside class="lister__sidebar">
-			<span>Filter</span>
-            <?php echo do_shortcode('[searchandfilter id="product_filter_primary"]'); ?>
+            <div class="product-filter">
+                <span id="filter-btn" class="product-filter__label accordion" onclick="displayFilter()">
+                    Filter
+                </span>
+                <div class="content">
+                    <div>
+                        <?php echo do_shortcode('[searchandfilter id="product_filter_primary"]'); ?>
+                    </div>
+                </div>
+            </div>
         </aside>
+
         <div class="lister__results">
             <?php
 				if ( woocommerce_product_loop() ) {
-					// Result count and catalog ordering
-					do_action( 'woocommerce_before_shop_loop' );
-
+			?>
+            <!-- Result count and catalog ordering -->
+            <div class="lister__sort-count-wrapper">
+                <?php do_action( 'woocommerce_before_shop_loop' ); ?>
+            </div>
+            <?php
 					// Shop loop
 					woocommerce_product_loop_start();
 					if ( wc_get_loop_prop( 'total' ) ) {

@@ -1,5 +1,30 @@
 .container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+
+  &::before {
+      display: none!important;
+  }
+
+  @include respond-to(600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond-to(768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include respond-to(1100px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
