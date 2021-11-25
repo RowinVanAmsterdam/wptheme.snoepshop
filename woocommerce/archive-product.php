@@ -23,7 +23,7 @@ get_template_part( 'template-parts/layout/header');
                 </span>
                 <div class="content">
                     <div>
-                        <?php echo do_shortcode('[searchandfilter id="product_filter_primary"]'); ?>
+                        <?php echo do_shortcode('[searchandfilter id="product_filter"]'); ?>
                     </div>
                 </div>
             </div>
