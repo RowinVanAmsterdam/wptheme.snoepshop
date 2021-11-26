@@ -3,11 +3,11 @@ defined( 'ABSPATH' ) || exit;
 get_template_part( 'template-parts/layout/header');
 ?>
 
-<div class="archive-product">
-    <!-- woocommerce_breadcrumb -->
-    <?php do_action( 'woocommerce_before_main_content' ); ?>
 
+
+<div class="archive-product">
     <header class="woocommerce-products-header">
+        <div class="woocommerce-products-header__breadcrumb-container"><?php woocommerce_breadcrumb();?></div>
         <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
         <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
         <?php endif; ?>

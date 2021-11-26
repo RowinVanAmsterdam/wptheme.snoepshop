@@ -1,18 +1,30 @@
 .archive-product {
-  .woocommerce-breadcrumb {
-    background: $color-01;
-    padding: 0 15px;
-    margin: 0;
-    color: #fff;
-  }
-
   .woocommerce-products-header {
     background-color: $color-01;
     margin-bottom: 50px;
 
+    &__breadcrumb-container {
+      @include container;
+
+      .woocommerce-breadcrumb {
+        color: hsla(0,0%,100%,.7);
+        padding-top: 10px;
+
+        a {
+          color: aliceblue;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
     &__title {
       text-align: center;
       color: #fff;
+      padding: 20px 15px 50px;
     }
   }
 
@@ -23,7 +35,7 @@
 
     @include respond-to(1024px) {
       flex-direction: row;
-    }    
+    }
 
     &__sidebar {
       .product-filter {
@@ -71,7 +83,6 @@
           @include respond-to(1024px) {
             max-height: fit-content;
           }
-
         }
 
         .content.open {
@@ -84,7 +95,7 @@
     &__sort-count-wrapper {
       display: flex;
       flex-direction: column-reverse;
-      border-bottom: 1px solid rgba(0,0,0,.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       margin-bottom: 15px;
 
       @include respond-to($mobile) {

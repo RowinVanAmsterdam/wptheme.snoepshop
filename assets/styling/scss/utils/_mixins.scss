@@ -1,11 +1,17 @@
 @mixin respond-to($size, $max-size: null) {
-    @if ($max-size) {
-        @media only screen and (min-width: $size) and (max-width: $max-size) {
-            @content;
-        }
-    } @else {
-        @media only screen and (min-width: $size) {
-            @content;
-        }
+  @if ($max-size) {
+    @media only screen and (min-width: $size) and (max-width: $max-size) {
+      @content;
     }
+  } @else {
+    @media only screen and (min-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
 }

@@ -6,9 +6,18 @@
 @font-face {
     font-family: 'Open sans';
     src: url('../../fonts/OpenSans-VariableFont.ttf');
-    src: url('../../fonts/OpenSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
+@font-face {
+    font-family: 'Open sans';
+    src: url('../../fonts/OpenSans-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 body {
