@@ -13,11 +13,11 @@
 <?php 
     $args = array(
         'taxonomy'   => "product_cat",
-        'number'     => $number,
-        'orderby'    => $orderby,
+        // 'number'     => $number,
+        // 'orderby'    => $orderby,
         'order'      => $order,
-        'hide_empty' => $hide_empty,
-        'include'    => $ids
+        // 'hide_empty' => $hide_empty,
+        // 'include'    => $ids
     );
     $product_categories = get_terms($args);
 ?>

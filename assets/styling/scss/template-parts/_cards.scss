@@ -1,116 +1,98 @@
-// .products {
-//     display: flex;
-//     flex-flow: row wrap;
-//     align-items: stretch;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     gap: 20px;
-// }
+#home,
+#archive-product,
+.upsells,
+.related {
 
-
-
-// .wooarchive {
-//     flex: 1 0 100%;
-// }
-
-.product {
+  .product {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: #fff;
-    box-shadow: 0 0 6px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 6px 0 rgb(54 32 87 / 14%);
+    // box-shadow: 0px 7px 59px 0px rgb(54 32 87 / 14%);
     max-width: 225px;
     align-items: stretch;
-    width: 100%!important;
-    margin: 0!important;
+    width: 100% !important;
+    margin: 0 !important;
 
     &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+      transform: translateY(-2px);
+      box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
     }
 
     .onsale {
-        background-color: $color-01!important;
-        border-radius: 8px!important;
-        right: unset!important;
-        left: 0!important;
-        border-radius: 8px 0 8px 0!important;
-        margin: 0!important;
-        min-height: unset!important;
-        line-height: unset!important;
-        padding: 8px 10px!important;
-        font-weight: bold!important;
+      @extend .badge__onsale;
     }
+    
     .woocommerce-loop-product {
-        &__link {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            padding: 10px 10px 5px;
+      &__link {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 10px 10px 5px;
 
-            img {
-                margin: 0!important;
-            }
+        img {
+          margin: 0 !important;
         }
+      }
 
-        &__title {
-            color: $color-text;
-        }
+      &__title {
+        color: $color-text;
+      }
     }
 
     .star-rating {
-        color: $color-02;
+      color: $color-02;
     }
 
     .price {
-        margin-top: auto;
-        color: $color-text!important;
-        font-size: 14px!important;
-        font-weight: bold!important;
+      margin-top: auto;
+      color: $color-text !important;
+      font-size: 14px !important;
+      font-weight: bold !important;
 
-        del .woocommerce-Price-amount {
-            font-size: 12px!important;
-        }
+      del .woocommerce-Price-amount {
+        font-size: 12px !important;
+      }
 
-
-        ins {
-            text-decoration: none;
-        }
+      ins {
+        text-decoration: none;
+      }
     }
 
     .button {
-        margin: 0!important;
-        text-align: center;
-        color: #fff!important;
-        background-color: $color-03!important;
-        border-radius: 8px!important;
+      margin: 0 !important;
+      text-align: center;
+      color: #fff !important;
+      background-color: $color-03 !important;
+      border-radius: 8px 8px 12px 12px !important;
 
-        &::before {
-            content: '\f290';
-            font-weight: 900;
-            font-family: "Font Awesome 5 Free";
-            margin-right: 8px;
-            font-size: 14px;
-        }
+      &::before {
+        content: "\f290";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        margin-right: 8px;
+        font-size: 14px;
+      }
 
-        &:hover {
-            background-color: $color-01!important;
-            transition: background-color 0.5s ease;
-        }
-        
-        &:active {
-            background-color: darken($color-02, 25%)!important;
-        }
+      &:hover {
+        background-color: $color-01 !important;
+        transition: background-color 0.5s ease;
+      }
+
+      &:active {
+        background-color: darken($color-02, 25%) !important;
+      }
     }
 
     // Don't display link to cart if product is added.
     .added_to_cart {
-        display: none!important;
+      display: none !important;
     }
-}
+  }
 
-.product-category {
+  .product-category {
     max-width: 190px;
     color: $color-01;
     text-transform: uppercase;
@@ -118,18 +100,18 @@
     text-shadow: 0 3px 0 rgb(0 0 0 / 10%);
 
     img {
-        border-radius: 8px;
-        margin: 0!important;
+      border-radius: 8px;
+      margin: 0 !important;
     }
 
     .woocommerce-loop-category {
-        &__title {
-            text-align: center;
+      &__title {
+        text-align: center;
 
-            .count {
-                display: none;
-            }
+        .count {
+          display: none;
         }
+      }
     }
+  }
 }
-

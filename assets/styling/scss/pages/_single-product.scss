@@ -1,0 +1,105 @@
+.single-product {
+  .product-information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+
+    // Do not display the default sale flash label above gallery.
+    & > .onsale {
+      display: none;
+    }
+
+    .badge-onsale {
+      position: absolute;
+      top: 0;
+    }
+
+    .woocommerce-product-gallery {
+      width: 150px;
+    }
+
+    .summary {
+      background-color: #fff;
+      box-shadow: 0px 20px 75px 0px rgb(54 32 87 / 21%);
+      border-radius: 20px;
+      padding: 50px 50px 30px;
+      position: relative;
+      max-width: 480px;
+      margin: 0 auto;
+
+      .price {
+        margin-top: auto;
+        color: $color-text !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+  
+        del .woocommerce-Price-amount {
+          font-size: 12px !important;
+        }
+  
+        ins {
+          text-decoration: none;
+        }
+      }
+
+      .quantity .input-text {
+        height: 35px;
+      }
+
+      .single_add_to_cart_button {
+        background-color: #FFDC7C;
+      }
+
+      .usp-list {
+        margin-bottom: 20px;
+
+        &-item {
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+
+          .icon__svg {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            fill: $color-02;
+          }
+        }
+      }
+
+      .product_meta {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        font-style: italic;
+        color: $color-09;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .additional-information {
+    border-radius: 20px 20px 0 0;
+    margin-top: 50px;
+    
+    .product-info-banner {
+      color: #fff;
+      background-color: $color-06;
+      text-align: center;
+      box-shadow: 0 4px 0 0 rgb(0 0 0 / 5%);
+      padding: 20px 15px;
+      text-shadow: 1px 1px 2px rgb(51 51 51 / 60%);
+    }
+
+    .related {
+      border-top: 1px solid $color-08;
+      margin-top: 100px;
+      padding-top: 30px;
+
+      h2:first-child {
+        text-align: center;
+      }
+    }
+  }
+}

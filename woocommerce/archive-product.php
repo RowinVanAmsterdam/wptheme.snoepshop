@@ -5,7 +5,7 @@ get_template_part( 'template-parts/layout/header');
 
 
 
-<div class="archive-product">
+<main id="archive-product" class="archive-product">
     <header class="woocommerce-products-header">
         <div class="woocommerce-products-header__breadcrumb-container"><?php woocommerce_breadcrumb();?></div>
         <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
@@ -59,5 +59,5 @@ get_template_part( 'template-parts/layout/header');
 			?>
         </div>
     </section>
-</div>
+</main>
 <?php get_template_part( 'template-parts/layout/footer');?>

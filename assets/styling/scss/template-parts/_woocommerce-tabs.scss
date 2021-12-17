@@ -1,0 +1,42 @@
+.woocommerce-tabs {
+  display: flex;
+  flex-wrap: wrap;
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 14px!important;
+    min-height: 350px;
+
+    &::before,
+    &::after {
+      content: none !important;
+    }
+
+    @include respond-to(800px) {
+      width: 30%;
+    }
+
+    li {
+      background-color: #fff !important;
+      border: none !important;
+
+      &::before,
+      &::after {
+        content: none !important;
+      }
+
+      &.active {
+        color: $color-01 !important;
+      }
+    }
+  }
+
+  .woocommerce-Tabs-panel {
+    padding: 0 15px !important;
+    @include respond-to(800px) {
+      width: 70%;
+    }
+  }
+}

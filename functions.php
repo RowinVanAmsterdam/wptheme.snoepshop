@@ -15,6 +15,7 @@ function load_javascript() {
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
 
+
 // function load_iconSprite() {
 //     get_template_part('/assets/images/icon-sprite.svg', 'hello');
 // }
@@ -38,7 +39,13 @@ add_action('wp_enqueue_scripts', 'load_javascript');
 
 // Add theme support
 add_theme_support('menus');
-add_theme_support('woocommerce');
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 // Register menu
 register_nav_menus(
@@ -81,3 +88,34 @@ register_nav_menus(
             'after_title' => '</h4>'
         )
         );
+
+        // Show next and previous buttons on product image carousel
+        // add_filter( 'woocommerce_single_product_carousel_options', 'cuswoo_update_woo_flexslider_options' );
+        /** 
+         * Filer WooCommerce Flexslider options - Add Navigation Arrows
+         */
+        // function cuswoo_update_woo_flexslider_options( $options ) {
+        
+        //     $options['directionNav'] = true;
+        
+        //     return $options;
+        // }
+
+
+        // Woocommerce functions
+
+        // Change add-to-cart text
+        add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );
+        function woo_custom_cart_button_text() { return __( 'In winkelwagen', 'woocommerce' ); };
+
+        // Remove short-description on single-product page
+        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+        function woocommerce_template_single_excerpt() { return; };
+
+        // Remove meta on single-product page
+        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+        function woocommerce_template_single_meta() { return; };
+
+        // Remove up-sell on single-product page
+        remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+        function woocommerce_upsell_display() { return; };

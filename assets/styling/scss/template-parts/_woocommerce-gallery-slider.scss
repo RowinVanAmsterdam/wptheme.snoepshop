@@ -1,0 +1,56 @@
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+  padding: 5px 5px 0 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (min-width: 420px) {
+  .woocommerce-page div.product div.images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+  .woocommerce div.product div.images .flex-control-thumbs {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 80px;
+    flex: 1 0 80px;
+    /* Adjust PX to suit width of thumbnails */
+    max-height: 425px;
+    /* Adjust Height to Image height on desktop */
+    overflow: auto;
+  }
+  .woocommerce div.product div.images .flex-control-thumbs li {
+    width: 100%;
+    padding: 0 10px 10px 0;
+  }
+}
+
+/* VERSION 2 - Horizontal Scrolling Thumbnails */
+.woocommerce div.product div.images .flex-control-thumbs li {
+  padding: 5px 5px 0 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 25%;
+  flex: 1 0 25%;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
