@@ -89,9 +89,9 @@ if ( post_password_required() ) {
     </div>
   </section>
 
-  <section class="additional-information">
-    <div class="product-info-banner"><?php the_title( '<h1 class="product_title entry-title">', '</h1>' );?></div>
-    <div class=" container container-1200">
+  <section class="additional-information container container-1200">
+    <h2 class="additional-information__heading">Productinformatie</h2>
+    <div>
       <?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.

@@ -2,8 +2,13 @@
   .product-information {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    margin-top: 80px;
+    
+    @include respond-to(800px) {
+      flex-direction: row;
+      margin-top: 80px;
+    }
 
     // Do not display the default sale flash label above gallery.
     & > .onsale {
@@ -16,7 +21,11 @@
     }
 
     .woocommerce-product-gallery {
-      width: 150px;
+      width: 100%!important;
+
+      @include respond-to(800px) {
+        width: 48%!important;
+      }
     }
 
     .summary {
@@ -29,26 +38,40 @@
       margin: 0 auto;
 
       .price {
-        margin-top: auto;
+        margin-bottom: 20px;
         color: $color-text !important;
-        font-size: 14px !important;
+        font-size: 20px !important;
         font-weight: bold !important;
-  
+
         del .woocommerce-Price-amount {
-          font-size: 12px !important;
+          font-size: 16px !important;
         }
-  
+
         ins {
           text-decoration: none;
         }
       }
 
-      .quantity .input-text {
-        height: 35px;
-      }
+      .cart {
+        margin-bottom: 25px!important;
+        margin-top: 5px;
 
-      .single_add_to_cart_button {
-        background-color: #FFDC7C;
+        .quantity .input-text {
+          height: 35px;
+        }
+
+        .single_add_to_cart_button {
+          background-color: $color-03;
+
+          &:hover {
+            background-color: $color-01 !important;
+            transition: background-color 0.5s ease;
+          }
+    
+          &:active {
+            background-color: darken($color-02, 25%) !important;
+          }
+        }
       }
 
       .usp-list {
@@ -82,23 +105,26 @@
   .additional-information {
     border-radius: 20px 20px 0 0;
     margin-top: 50px;
-    
-    .product-info-banner {
-      color: #fff;
-      background-color: $color-06;
+
+    &__heading {
+      border-top: 1px solid $color-08;
+      border-bottom: 1px solid $color-08;
       text-align: center;
-      box-shadow: 0 4px 0 0 rgb(0 0 0 / 5%);
       padding: 20px 15px;
-      text-shadow: 1px 1px 2px rgb(51 51 51 / 60%);
+      margin-bottom: 50px;
+    }
+
+    .woocommerce-Reviews-title {
+      display: none;
     }
 
     .related {
       border-top: 1px solid $color-08;
       margin-top: 100px;
-      padding-top: 30px;
 
       h2:first-child {
         text-align: center;
+        margin-bottom: 50px;
       }
     }
   }

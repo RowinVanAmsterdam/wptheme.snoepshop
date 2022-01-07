@@ -108,14 +108,18 @@ register_nav_menus(
         add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );
         function woo_custom_cart_button_text() { return __( 'In winkelwagen', 'woocommerce' ); };
 
-        // Remove short-description on single-product page
+        // Remove short-description @single-product page
         remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
         function woocommerce_template_single_excerpt() { return; };
 
-        // Remove meta on single-product page
+        // Remove meta @single-product page
         remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
         function woocommerce_template_single_meta() { return; };
 
-        // Remove up-sell on single-product page
+        // Remove Heading Title @WooCommerce Single Product Tabs
+        add_filter( 'woocommerce_product_description_heading', '__return_null' );
+        add_filter( 'woocommerce_product_additional_information_heading', '__return_null' );
+
+        // Remove up-sell @single-product page
         remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
         function woocommerce_upsell_display() { return; };
