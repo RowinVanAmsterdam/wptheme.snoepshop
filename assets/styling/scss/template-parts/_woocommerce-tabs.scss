@@ -1,13 +1,13 @@
 .woocommerce-tabs {
   display: flex;
   flex-wrap: wrap;
+  min-height: 350px;
 
   .tabs {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 0!important;
-    min-height: 350px;
+    padding-top: 0 !important;
 
     &::before,
     &::after {
@@ -22,13 +22,41 @@
       background-color: #fff !important;
       border: none !important;
 
+      &:not(:first-child) {
+        padding-top: 10px !important;
+      }
+
+      a {
+        color: #9487c0 !important;
+        position: relative;
+        transition: transform 0.25s;
+
+        &::after {
+          content: "";
+          top: 10%;
+          left: -20px;
+          position: absolute;
+          background: #392f5a;
+          width: 4px;
+          height: 80%;
+          border-radius: 0 2px 2px 0;
+          transition: transform 0.5s;
+          transform: scale(0);
+          transform-origin: center;
+        }
+      }
+
+      &.active a {
+        color: #392f5a !important;
+
+        &::after {
+          transform: scale(1);
+        }
+      }
+
       &::before,
       &::after {
         content: none !important;
-      }
-
-      &.active {
-        color: $color-01 !important;
       }
     }
   }

@@ -123,3 +123,51 @@ register_nav_menus(
         // Remove up-sell @single-product page
         remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
         function woocommerce_upsell_display() { return; };
+
+
+        // Cart
+        // Removes Cross sell @cart page
+        remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+
+        add_shortcode( 'recently_viewed_products', 'bbloomer_recently_viewed_shortcode' );
+ 
+        // Recent bezochte producten
+// function bbloomer_recently_viewed_shortcode() {
+ 
+//    $viewed_products = ! empty( $_COOKIE['woocommerce_recently_viewed'] ) ? (array) explode( '|', wp_unslash( $_COOKIE['woocommerce_recently_viewed'] ) ) : array();
+//    $viewed_products = array_reverse( array_filter( array_map( 'absint', $viewed_products ) ) );
+ 
+//    if ( empty( $viewed_products ) ) return;
+    
+//    $title = '<h3>Recent bezochte producten</h3>';
+//    $product_ids = implode( ",", $viewed_products );
+ 
+//    return $title . do_shortcode("[products ids='$product_ids']");
+   
+// }
+
+// function custom_track_product_view() {
+//     if ( ! is_singular( 'product' ) ) {
+//         return;
+//     }
+
+//     global $post;
+
+//     if ( empty( $_COOKIE['woocommerce_recently_viewed'] ) )
+//         $viewed_products = array();
+//     else
+//         $viewed_products = (array) explode( '|', $_COOKIE['woocommerce_recently_viewed'] );
+
+//     if ( ! in_array( $post->ID, $viewed_products ) ) {
+//         $viewed_products[] = $post->ID;
+//     }
+
+//     if ( sizeof( $viewed_products ) > 15 ) {
+//         array_shift( $viewed_products );
+//     }
+
+//     // Store for session only
+//     wc_setcookie( 'woocommerce_recently_viewed', implode( '|', $viewed_products ) );
+// }
+
+// add_action( 'template_redirect', 'custom_track_product_view', 20 );

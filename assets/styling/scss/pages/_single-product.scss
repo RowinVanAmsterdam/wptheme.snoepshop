@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 20px;
     
     @include respond-to(800px) {
       flex-direction: row;
@@ -22,6 +23,7 @@
 
     .woocommerce-product-gallery {
       width: 100%!important;
+      max-width: 620px;
 
       @include respond-to(800px) {
         width: 48%!important;
@@ -36,6 +38,11 @@
       position: relative;
       max-width: 480px;
       margin: 0 auto;
+      width: 100%!important;
+
+      @include respond-to(800px) {
+        width: 48%!important;
+      }
 
       .price {
         margin-bottom: 20px;
@@ -107,11 +114,9 @@
     margin-top: 50px;
 
     &__heading {
-      border-top: 1px solid $color-08;
-      border-bottom: 1px solid $color-08;
       text-align: center;
       padding: 20px 15px;
-      margin-bottom: 50px;
+      color: #392f5a;
     }
 
     .woocommerce-Reviews-title {
@@ -119,7 +124,6 @@
     }
 
     .related {
-      border-top: 1px solid $color-08;
       margin-top: 100px;
 
       h2:first-child {
