@@ -92,22 +92,26 @@
         }
       }
       &-thumbnail {
+        img {
+          width: 80px;
+        }
+
         // Show product image on mobile
-        @media only screen and (max-width: 768px) {
+        @include respond-to(0, 768px) {
           display: block !important;
 
           &::before {
             display: none;
           }
         }
-
-        img {
-          width: 80px;
-        }
       }
     }
 
     .actions {
+      @include respond-to(0, 768px) {
+        margin-top: 20px;
+      }
+
       .input-text {
         min-width: 130px !important;
         min-height: 35px;
@@ -120,7 +124,6 @@
         color: $color-02 !important;
         border: 1px solid $color-02;
         border-radius: 5px;
-        // font-weight: normal;
         font-size: 14px;
       }
     }

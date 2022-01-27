@@ -646,7 +646,10 @@ a:focus {
 .cart .woocommerce .product-remove a:active {
   background-color: #e9ecef;
 }
-@media only screen and (max-width: 768px) {
+.cart .woocommerce .product-thumbnail img {
+  width: 80px;
+}
+@media only screen and (min-width: 0) and (max-width: 768px) {
   .cart .woocommerce .product-thumbnail {
     display: block !important;
   }
@@ -654,8 +657,10 @@ a:focus {
     display: none;
   }
 }
-.cart .woocommerce .product-thumbnail img {
-  width: 80px;
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  .cart .woocommerce .actions {
+    margin-top: 20px;
+  }
 }
 .cart .woocommerce .actions .input-text {
   min-width: 130px !important;
