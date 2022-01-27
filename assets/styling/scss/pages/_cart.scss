@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     flex-direction: column;
 
-    @include respond-to(955px) {
+    @include respond-to(1000px) {
       flex-direction: row;
     }
 
@@ -17,15 +17,22 @@
       width: 100%;
     }
 
-    .shop_table {
+    // Reset for table borders and background.
+    .shop_table,
+    .shop_table td {
       border: none;
+      background-color: unset !important;
+      padding: 0;
+
+      @include respond-to(768px) {
+        padding: 9px 0;
+      }
     }
 
     &-cart-form {
       flex: 2;
-      margin-right: 30px;
 
-      @media only screen and (max-width: 768px) {
+      @include respond-to(0, 768px) {
         &__cart-item {
           display: grid !important;
           grid-template-columns: 80px auto;
@@ -44,7 +51,12 @@
           }
         }
       }
+
+      @include respond-to(1000px) {
+        margin-right: 30px;
+      }
     }
+
     .cart-collaterals {
       flex: 1;
 
@@ -67,15 +79,43 @@
       }
     }
 
+    .product {
+      &-remove a {
+        color: #adb5bd !important;
+
+        &:hover {
+          background-color: unset;
+        }
+
+        &:active {
+          background-color: #e9ecef;
+        }
+      }
+      &-thumbnail {
+        // Show product image on mobile
+        @media only screen and (max-width: 768px) {
+          display: block !important;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        img {
+          width: 80px;
+        }
+      }
+    }
+
     .actions {
       .input-text {
-        width: 200px !important;
-        height: 35px;
+        min-width: 130px !important;
+        min-height: 35px;
         border-radius: 5px;
       }
 
       .button {
-        height: 35px;
+        min-height: 35px;
         background-color: #fff;
         color: $color-02 !important;
         border: 1px solid $color-02;
@@ -83,17 +123,6 @@
         // font-weight: normal;
         font-size: 14px;
       }
-    }
-  }
-}
-
-// Show product image on mobile
-@media only screen and (max-width: 768px) {
-  .product-thumbnail {
-    display: block !important;
-
-    &::before {
-      display: none;
     }
   }
 }

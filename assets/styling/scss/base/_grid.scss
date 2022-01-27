@@ -1,11 +1,11 @@
 .container {
-  max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
+  max-width: 1300px;
 
-  &-1200 {
-    max-width: 1150px;
-  }
+  &--small {
+    max-width: 1170px;
+  } 
 }
 
 .products {

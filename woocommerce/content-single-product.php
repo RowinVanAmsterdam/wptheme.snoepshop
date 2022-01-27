@@ -33,7 +33,7 @@ if ( post_password_required() ) {
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
-  <section class="product-information container container-1200">
+  <section class="product-information container container--small">
     <?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
@@ -89,7 +89,7 @@ if ( post_password_required() ) {
     </div>
   </section>
 
-  <section class="additional-information container container-1200">
+  <section class="additional-information container container--small">
     <h2 class="additional-information__heading">Productinformatie</h2>
     <div>
       <?php

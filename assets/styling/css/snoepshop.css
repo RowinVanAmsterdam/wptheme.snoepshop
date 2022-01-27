@@ -21,12 +21,12 @@
 }
 
 .container, .archive-product .woocommerce-products-header__breadcrumb-container {
-  max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
+  max-width: 1300px;
 }
-.container-1200 {
-  max-width: 1150px;
+.container--small {
+  max-width: 1170px;
 }
 
 .lister__results .products {
@@ -573,7 +573,7 @@ a:focus {
   flex-wrap: wrap;
   flex-direction: column;
 }
-@media only screen and (min-width: 955px) {
+@media only screen and (min-width: 1000px) {
   .cart .woocommerce {
     flex-direction: row;
   }
@@ -581,14 +581,22 @@ a:focus {
 .cart .woocommerce-notices-wrapper {
   width: 100%;
 }
-.cart .woocommerce .shop_table {
+.cart .woocommerce .shop_table,
+.cart .woocommerce .shop_table td {
   border: none;
+  background-color: unset !important;
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .cart .woocommerce .shop_table,
+.cart .woocommerce .shop_table td {
+    padding: 9px 0;
+  }
 }
 .cart .woocommerce-cart-form {
   flex: 2;
-  margin-right: 30px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 0) and (max-width: 768px) {
   .cart .woocommerce-cart-form__cart-item {
     display: grid !important;
     grid-template-columns: 80px auto;
@@ -602,6 +610,11 @@ a:focus {
     grid-column: 1;
     grid-row: 2/5;
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .cart .woocommerce-cart-form {
+    margin-right: 30px;
   }
 }
 .cart .woocommerce .cart-collaterals {
@@ -624,13 +637,33 @@ a:focus {
   font-size: 16px;
   background-color: #ff477e;
 }
+.cart .woocommerce .product-remove a {
+  color: #adb5bd !important;
+}
+.cart .woocommerce .product-remove a:hover {
+  background-color: unset;
+}
+.cart .woocommerce .product-remove a:active {
+  background-color: #e9ecef;
+}
+@media only screen and (max-width: 768px) {
+  .cart .woocommerce .product-thumbnail {
+    display: block !important;
+  }
+  .cart .woocommerce .product-thumbnail::before {
+    display: none;
+  }
+}
+.cart .woocommerce .product-thumbnail img {
+  width: 80px;
+}
 .cart .woocommerce .actions .input-text {
-  width: 200px !important;
-  height: 35px;
+  min-width: 130px !important;
+  min-height: 35px;
   border-radius: 5px;
 }
 .cart .woocommerce .actions .button {
-  height: 35px;
+  min-height: 35px;
   background-color: #fff;
   color: #ff477e !important;
   border: 1px solid #ff477e;
@@ -638,14 +671,6 @@ a:focus {
   font-size: 14px;
 }
 
-@media only screen and (max-width: 768px) {
-  .product-thumbnail {
-    display: block !important;
-  }
-  .product-thumbnail::before {
-    display: none;
-  }
-}
 /* template-parts */
 .badge__onsale, #home .product .onsale,
 #archive-product .product .onsale,
