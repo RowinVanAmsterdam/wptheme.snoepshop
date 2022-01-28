@@ -5,8 +5,8 @@ Template Name: Cart
 ?>
 
 <?php get_template_part( 'template-parts/layout/header');?>
-<div class="container container--small"><?php woocommerce_breadcrumb();?></div>
 <main class="cart">
+  <div class="container container--small"><?php woocommerce_breadcrumb();?></div>
 
     <h1 class="cart__heading">Winkelwagen</h1>
 

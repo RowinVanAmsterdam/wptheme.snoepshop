@@ -171,3 +171,16 @@ register_nav_menus(
 // }
 
 // add_action( 'template_redirect', 'custom_track_product_view', 20 );
+
+// Remove coupon code @checkout-page
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+
+
+// Show product thumbnail @checkout-page
+add_filter( 'woocommerce_cart_item_name', 'product_image_review_order_checkout', 9999, 3 );
+function product_image_review_order_checkout( $name, $cart_item, $cart_item_key ) {
+    if ( ! is_checkout() ) return $name;
+    $product = $cart_item['data'];
+    $thumbnail = $product->get_image( array( '50', '50' ), array( 'class' => 'product-name__thumbnail' ) );
+    return $thumbnail . $name;
+}
