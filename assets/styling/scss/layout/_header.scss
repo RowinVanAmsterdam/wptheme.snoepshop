@@ -33,19 +33,22 @@
     &__link {
       display: flex;
       align-items: center;
+      justify-content: center;
+      background-color: #e9ecef;
+      padding: 10px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: #f8f9fa;
+      }
+
+      &:active {
+        background-color: #dee2e6;
+      }
 
       .icon {
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-      }
-    }
-
-    &__label {
-      display: none;
-      
-      @include respond-to($mobile) {
-        display: inline-block;
+        width: 15px;
+        height: 15px;
       }
     }
   }

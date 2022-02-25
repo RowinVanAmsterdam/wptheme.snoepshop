@@ -37,7 +37,6 @@
                             <svg class="icon">
                                 <use href="#icon-user" />
                             </svg>
-                            <span class="header-main__label">Mijn account</span>
                         </a>
                     </li>
                     <li class="header-main__nav-list-item">
@@ -45,7 +44,6 @@
                             <svg class="icon">
                                 <use href="#icon-shopping-bag" />
                             </svg>
-                            <span class="header-main__label">Winkelmand</span>
                         </a>
                     </li>
                 </ul>

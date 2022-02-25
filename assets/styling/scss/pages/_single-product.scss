@@ -68,10 +68,10 @@
         }
 
         .single_add_to_cart_button {
-          background-color: $color-03;
+          background-color: $color-10;
 
           &:hover {
-            background-color: $color-01 !important;
+            background-color: $color-09 !important;
             transition: background-color 0.5s ease;
           }
     
@@ -93,7 +93,7 @@
             width: 15px;
             height: 15px;
             margin-right: 5px;
-            fill: $color-02;
+            fill: $color-10;
           }
         }
       }
@@ -103,7 +103,7 @@
         flex-direction: column;
         font-size: 14px;
         font-style: italic;
-        color: $color-09;
+        color: $bw-03;
         margin-top: 10px;
       }
     }

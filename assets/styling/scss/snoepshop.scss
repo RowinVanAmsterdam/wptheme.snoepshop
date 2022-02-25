@@ -10,6 +10,7 @@
 
 /* layout */
 @import 'layout/header';
+@import 'layout/form';
 
 /* pages */
 @import 'pages/account';
@@ -22,6 +23,7 @@
 /* template-parts */
 @import 'template-parts/badges';
 @import 'template-parts/cards';
+@import 'template-parts/order-elements';
 @import 'template-parts/product-filter';
 @import 'template-parts/woocommerce-gallery-slider';
 @import 'template-parts/woocommerce-tabs';

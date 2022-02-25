@@ -184,3 +184,10 @@ function product_image_review_order_checkout( $name, $cart_item, $cart_item_key 
     $thumbnail = $product->get_image( array( '50', '50' ), array( 'class' => 'product-name__thumbnail' ) );
     return $thumbnail . $name;
 }
+
+// Remove shipping labels
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'remove_shipping_label', 9999, 2 );
+function remove_shipping_label( $label, $method ) {
+    $new_label = preg_replace( '/^.+:/', '', $label );
+    return $new_label;
+}

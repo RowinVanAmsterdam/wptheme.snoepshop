@@ -1,0 +1,39 @@
+.woocommerce form .form-row {
+  label {
+    font-size: 14px;
+    color: $color-01;
+  }
+
+  .required {
+    color: $color-01;
+  }
+
+  .input,
+  .input-text {
+    border: 2px solid #f7cad0;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 15px;
+
+    &:active,
+    &:focus {
+      border-color: $color-01;
+    }
+  }
+
+  .select2-selection {
+      border: 2px solid #f7cad0;
+      border-radius: 8px;
+      font-size: 15px;
+      height: auto;
+
+      &__rendered {
+        color: inherit;
+      }
+  }
+}
+
+.select2-dropdown {
+  border: 2px solid #f7cad0;
+  border-radius: 0 0 8px 8px;
+}

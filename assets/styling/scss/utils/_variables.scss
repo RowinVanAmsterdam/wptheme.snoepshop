@@ -1,23 +1,34 @@
 /* Colors */
-$color-01: #ff0a54;
-$color-02: #ff477e;
-$color-03: #ff7096;
-$color-04: #ff99ac;
-$color-05: #fbb1bd;
-$color-06: #fae0e4;
+$color-01: #392f5a;
+$color-02: #8b5fbf;
+$color-03: #c989eb;
+$color-04: #f7aef8;
+$color-05: #fdc5f5;
 
-$color-07: #f8f9fa;
-$color-08: #ced4da;
-$color-09: #adb5bd;
-$color-10: #6c757d;
-$color-11: #343a40;
-$color-12: #212529;
+$color-06: #5e0c27;
+$color-07: #87153b;
+$color-08: #d12e64;
+$color-09: #e8749a;
+$color-10: #f497b6;
 
-$color-text: $color-11;
+$color-11: #BABAEF;
+$color-12: #211F7E;
+$color-13: #464699;
+
+
+$bw-01: #f8f9fa;
+$bw-02: #ced4da;
+$bw-03: #adb5bd;
+$bw-04: #6c757d;
+$bw-05: #343a40;
+$bw-06: #212529;
+
+$color-text: $bw-05;
 
 /* Fonts */
-$font-family-headings: 'Lilita One', Arial, sans-serif;
-$font-family-base: 'Open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-headings: "Lilita One", Arial, sans-serif;
+$font-family-base: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-icon: "Font Awesome 5 Free", "Font Awesome 5 Brands";
 
 /* Screen width */
 $mobile: 480px;
