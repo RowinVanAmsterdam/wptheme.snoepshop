@@ -40,10 +40,12 @@
                         </a>
                     </li>
                     <li class="header-main__nav-list-item">
-                        <a href="/winkelmand" class="header-main__link link">
+                        <a href="<?php echo wc_get_cart_url(); ?>" class="header-main__link link">
                             <svg class="icon">
                                 <use href="#icon-shopping-bag" />
                             </svg>
+
+                            <span class="cart-counter"><?php echo WC()->cart->get_cart_contents_count() ?></span>
                         </a>
                     </li>
                 </ul>

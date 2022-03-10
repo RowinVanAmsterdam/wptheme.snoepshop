@@ -130,6 +130,18 @@ register_nav_menus(
         remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
 
         add_shortcode( 'recently_viewed_products', 'bbloomer_recently_viewed_shortcode' );
+
+        // Show cart content total Ajax
+        add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+        function woocommerce_header_add_to_cart_fragment( $fragments ) {
+            global $woocommerce;
+            ob_start();
+            ?>
+                <span class="cart-counter"><?php echo WC()->cart->get_cart_contents_count() ?></span>
+            <?php
+            $fragments['span.cart-counter'] = ob_get_clean();
+            return $fragments;
+        }
  
         // Recent bezochte producten
 // function bbloomer_recently_viewed_shortcode() {

@@ -1,0 +1,40 @@
+.btn {
+  border: none;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.1s all ease-in-out;
+
+  &-primary {
+    font-size: 16px;
+    background-color: $color-10;
+    box-shadow: $color-10 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    word-break: break-word;
+    border: 0;
+
+    &:hover {
+      background-color: $color-09;
+      box-shadow: $color-09 0 10px 20px -10px;
+    }
+
+    &:focus {
+      background-color: $color-08;
+      box-shadow: $color-08 0 10px 20px -10px;
+    }
+  }
+
+  &--rounded {
+    border-radius: 8px;
+  }
+}

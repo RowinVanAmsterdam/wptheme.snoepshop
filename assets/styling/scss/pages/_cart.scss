@@ -1,5 +1,4 @@
 .cart {
-
   .woocommerce {
     display: flex;
     flex-wrap: wrap;
@@ -10,6 +9,10 @@
     }
 
     &-notices-wrapper {
+      width: 100%;
+    }
+
+    .cart-empty {
       width: 100%;
     }
 
@@ -70,8 +73,12 @@
       }
 
       .checkout-button {
-        font-size: 16px;
-        background-color: $color-02;
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn--rounded;
+        width: fit-content;
+        margin-left: auto;
+        margin-bottom: 0;
       }
     }
 

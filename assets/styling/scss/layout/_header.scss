@@ -37,6 +37,7 @@
       background-color: #e9ecef;
       padding: 10px;
       border-radius: 50%;
+      position: relative;
 
       &:hover {
         background-color: #f8f9fa;
@@ -49,6 +50,22 @@
       .icon {
         width: 15px;
         height: 15px;
+      }
+
+      .cart-counter {
+        position: absolute;
+        background-color: $color-02;
+        top: -5px;
+        right: -3px;
+        font-size: 10px;
+        font-weight: bold;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
       }
     }
   }
