@@ -7,7 +7,7 @@
     "start": "npm run compile-scss -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile-scss": "sass assets/styling/scss:assets/styling/css",
-    "ngrok": "ngrok http --host-header=rewrite 8888",
+    "ngrok": "ngrok http 8888",
     "localtunnel": "lt --port 8888"
   },
   "repository": {
